@@ -1,6 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { TestComponent } from "../components/TestComponent.tsx";
+import { Image } from "astro:assets";
+import myImportedImage from "./img/cat.png";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -35,10 +38,20 @@ import Card from '../components/Card.astro';
 		</svg>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			To get started, open the directory <code>src/pages</code> in your project.<br
+			/>
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
+			above.
 		</p>
 		<ul role="list" class="link-card-grid">
+			<TestComponent client:only="react" />
+			<Image
+				src={myImportedImage}
+				alt="descriptive text"
+				width="200"
+				height="150"
+				class="instructions"
+			/>
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
@@ -96,10 +109,14 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
+
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
