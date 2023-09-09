@@ -48,8 +48,8 @@ import myImportedImage from "./img/cat.png";
 			<Image
 				src={myImportedImage}
 				alt="descriptive text"
-				width="200"
-				height="150"
+				width={myImportedImage.width}
+				height={myImportedImage.height}
 				class="instructions"
 			/>
 			<Card
@@ -136,5 +136,10 @@ import myImportedImage from "./img/cat.png";
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+
+	.instructions {
+		max-width: 500px;
+		max-height: 200px;
 	}
 </style>
