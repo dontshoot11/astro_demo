@@ -19,8 +19,26 @@ import video from "./video/video.mp4";
           class={styles.catPhoto}
           quality={65}
         />
-        <video class={styles.catVideo} src={video} autoplay loop></video>
+        <astro-video>
+          <video class={styles.catVideo} src={video} loop></video>
+        </astro-video>
       </div>
     </div>
   </main>
 </Layout>
+
+<script>
+  class AstroVideo extends HTMLElement {
+    constructor() {
+      super();
+      let isPlaying = false;
+      const video = this.querySelector("video");
+      video.addEventListener("click", () => {
+        isPlaying = !isPlaying;
+        isPlaying ? video.pause() : video.play();
+      });
+    }
+  }
+
+  customElements.define("astro-video", AstroVideo);
+</script>
