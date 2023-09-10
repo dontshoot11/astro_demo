@@ -1,4 +1,11 @@
-.catPhoto {
+.contentWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.catPhoto,
+.catVideo {
   max-width: 500px;
   max-height: 200px;
 }

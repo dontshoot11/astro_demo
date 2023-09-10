@@ -3,20 +3,25 @@ import { Image } from "astro:assets";
 import myImportedImage from "./img/cat.png";
 import Layout from "../../layouts/Layout.astro";
 import styles from "./style.module.css";
+import video from "./video/video.mp4";
 ---
 
 <Layout title="This is a cat.">
   <main>
     <div class="container">
       <h1><span class="text-gradient">CAT</span></h1>
-      <Image
-        src={myImportedImage}
-        alt="descriptive text"
-        width={myImportedImage.width}
-        height={myImportedImage.height}
-        class={styles.catPhoto}
-        quality={65}
-      />
+      <div class={styles.contentWrap}>
+        <Image
+          src={myImportedImage}
+          alt="descriptive text"
+          width={myImportedImage.width}
+          height={myImportedImage.height}
+          class={styles.catPhoto}
+          quality={65}
+        />
+        <video class={styles.catVideo} src={video} autoplay="false" loop
+        ></video>
+      </div>
     </div>
   </main>
 </Layout>
