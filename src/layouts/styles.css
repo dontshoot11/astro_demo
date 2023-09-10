@@ -20,10 +20,7 @@ code {
 }
 
 main {
-  margin: auto;
-  padding: 1rem;
-  width: 800px;
-  max-width: calc(100% - 2rem);
+  margin: 0;
   color: white;
   font-size: 20px;
   line-height: 1.6;
@@ -35,4 +32,10 @@ main {
   -webkit-text-fill-color: transparent;
   background-size: 400%;
   background-position: 0%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
 }

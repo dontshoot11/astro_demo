@@ -7,14 +7,16 @@ import styles from "./style.module.css";
 
 <Layout title="This is a cat.">
   <main>
-    <h1><span class="text-gradient">CAT</span></h1>
-    <Image
-      src={myImportedImage}
-      alt="descriptive text"
-      width={myImportedImage.width}
-      height={myImportedImage.height}
-      class={styles.catPhoto}
-      quality={65}
-    />
+    <div class="container">
+      <h1><span class="text-gradient">CAT</span></h1>
+      <Image
+        src={myImportedImage}
+        alt="descriptive text"
+        width={myImportedImage.width}
+        height={myImportedImage.height}
+        class={styles.catPhoto}
+        quality={65}
+      />
+    </div>
   </main>
 </Layout>

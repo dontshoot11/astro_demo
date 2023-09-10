@@ -7,10 +7,12 @@ import Card from "../components/Card/Card.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <ul role="list" class={styles.list}>
-      <TestComponent client:only="react" />
-      <Card href="/astro_demo/cat/" title="Cat" body="Click to see the cat" />
-    </ul>
+    <div class="container">
+      <h1>Welcome to <span class="text-gradient">MAIN PAGE</span></h1>
+      <ul role="list" class={styles.list}>
+        <TestComponent client:only="react" />
+        <Card href="/astro_demo/cat/" title="Cat" body="Click to see the cat" />
+      </ul>
+    </div>
   </main>
 </Layout>
