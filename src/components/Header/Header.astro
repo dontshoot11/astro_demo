@@ -1,14 +1,11 @@
 ---
-import cn from 'astro-classname';
 import styles from "./style.module.css";
 ---
 
-<header class={styles.header}> 
+<header class={styles.header}>
   <div class="container">
-    <span class:list={[
-        "text-gradient", styles.headerText
-    ]}>
-    HEADER HEADER HEADER
-  </span>
+    <span class:list={["text-gradient", styles.headerText]}>
+      HEADER HEADER HEADER
+    </span>
   </div>
 </header>
