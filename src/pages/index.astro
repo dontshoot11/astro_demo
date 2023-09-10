@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { TestComponent } from "../components/TestComponent.tsx";
 import styles from "./style.module.css";
 import Card from "../components/Card/Card.astro";
+import AstroHeart from "../components/AstroHeart/AstroHeart.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,6 +14,40 @@ import Card from "../components/Card/Card.astro";
         <TestComponent client:only="react" />
         <Card href="/astro_demo/cat/" title="Cat" body="Click to see the cat" />
       </ul>
+      <AstroHeart />
+      <p class={styles.text}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. In dictum non
+        consectetur a erat. Arcu dui vivamus arcu felis. Et tortor consequat id
+        porta. Adipiscing diam donec adipiscing tristique risus nec feugiat.
+        Suspendisse in est ante in nibh. Morbi tristique senectus et netus et
+        malesuada fames ac turpis. Id eu nisl nunc mi ipsum faucibus vitae
+        aliquet. Ullamcorper malesuada proin libero nunc consequat interdum.
+        Bibendum enim facilisis gravida neque convallis. Pretium viverra
+        suspendisse potenti nullam. Sed libero enim sed faucibus. Diam ut
+        venenatis tellus in metus vulputate. Porttitor eget dolor morbi non arcu
+        risus quis varius quam. At quis risus sed vulputate odio ut. Dui vivamus
+        arcu felis bibendum ut tristique et. At consectetur lorem donec massa
+        sapien faucibus et. Pretium viverra suspendisse potenti nullam ac.
+        Cursus euismod quis viverra nibh cras pulvinar. Ac tincidunt vitae
+        semper quis lectus. Quis commodo odio aenean sed adipiscing diam donec.
+        Vel orci porta non pulvinar neque laoreet suspendisse interdum
+        consectetur. Lorem sed risus ultricies tristique nulla aliquet enim
+        tortor. Est placerat in egestas erat imperdiet sed. Sit amet tellus cras
+        adipiscing enim eu turpis egestas. Dignissim sodales ut eu sem integer
+        vitae justo eget. Mattis ullamcorper velit sed ullamcorper morbi
+        tincidunt ornare. Bibendum arcu vitae elementum curabitur vitae.
+        Fringilla urna porttitor rhoncus dolor purus non enim. Justo nec
+        ultrices dui sapien eget mi. Quis commodo odio aenean sed adipiscing
+        diam donec adipiscing. Dapibus ultrices in iaculis nunc sed augue.
+        Semper viverra nam libero justo. Justo donec enim diam vulputate. Nisl
+        condimentum id venenatis a condimentum. Lectus quam id leo in vitae
+        turpis. Eget gravida cum sociis natoque penatibus et. Odio ut enim
+        blandit volutpat. Luctus accumsan tortor posuere ac ut consequat semper
+        viverra. Tristique nulla aliquet enim tortor at auctor urna nunc id.
+        Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Vel facilisis
+        volutpat est velit egestas.
+      </p>
     </div>
   </main>
 </Layout>

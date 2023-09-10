@@ -1,0 +1,7 @@
+.heart {
+  color: rgb(var(--accent-light));
+}
+
+.button {
+  cursor: pointer;
+}
