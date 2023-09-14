@@ -3,27 +3,26 @@ import styles from "./style.module.css";
 ---
 
 <astro-heart class={styles.heart}>
-  <button class={styles.button} aria-label="Heart">💜</button> × <span>0</span>
+	<button class={styles.button} aria-label="Heart">💜</button> × <span>0</span>
 </astro-heart>
 
 <script>
-  class AstroHeart extends HTMLElement {
-    constructor() {
-      super();
-      let count = 0;
+	class AstroHeart extends HTMLElement {
+		constructor() {
+			super();
+			let count = 0;
 
-      const heartButton = this.querySelector("button");
-      const countSpan = this.querySelector("span");
+			const heartButton = this.querySelector("button");
+			const countSpan = this.querySelector("span");
 
-      // Each time the button is clicked, update the count.
-      heartButton.addEventListener("click", () => {
-        count++;
-        if (countSpan) {
-          countSpan.textContent = count.toString();
-        }
-      });
-    }
-  }
+			heartButton.addEventListener("click", () => {
+				count++;
+				if (countSpan) {
+					countSpan.textContent = count.toString();
+				}
+			});
+		}
+	}
 
-  customElements.define("astro-heart", AstroHeart);
+	customElements.define("astro-heart", AstroHeart);
 </script>
